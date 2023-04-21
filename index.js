@@ -16,15 +16,15 @@ const {users} = {};
 let count =0;
 
 io.on("connection", (socket) => {
-    socket.on("NewUserJoined", (name) => {
-      count+=1;
+    socket.on("new-user-joined", (name) => {
+         count+=1;
       users[socket.id] = name;
-      socket.broadcast.emit("userJoined", name);
-      io.emit("userOnline", count);  
+      socket.broadcast.emit("user-joined", name);
+      io.emit("user-online", count);  
     });
 
     socket.on("send", (message) => {
-        socket.broadcast.emit("received", {
+        socket.broadcast.emit("receive", {
             message: message,
             name: users[socket.id]
         });
@@ -37,7 +37,7 @@ io.on("connection", (socket) => {
         if(count < 0 ) {
             count = 0;
         }
-         io.emit("user online", count)
+         io.emit("user-online", count)
 
     });
 })

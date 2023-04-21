@@ -12,7 +12,7 @@ body {
     font-weight: bold;
 }
 
-.container {
+#container {
     width: 753px;
     margin: auto;
     height: 60vh;
@@ -21,7 +21,7 @@ body {
     border: 2px solid black;
     border-radius: 20px 20px;
     margin-bottom: 23px;
-    background-image: url("./asset/chatBackground.jpg");
+    background-image: url("./asset/home\ page.gif");
 }
 
 .message {
@@ -61,9 +61,9 @@ body {
     width: 100%;
 }
 
-#msg {
+#messageInp {
     width: 85%;
-    border: 2px solid black;
+    border: 2px solid aqua;
     border-radius: 5px;
     height: 32px;
 }
@@ -71,10 +71,10 @@ body {
 .btn{
     cursor: pointer;
     width: 11%;
-    border: 2px solid #D50000;
+    border: 2px solid rgb(57, 28, 185);
     border-radius: 6px;
     height: 38px;
-    background-color: red;
+    background-color: rgb(57, 28, 185);
     color: whitesmoke;
 }
 .btn:hover{
@@ -89,8 +89,10 @@ body {
     text-align: center;
 
 }
+
+
 @media only screen and (max-width: 900px) and (min-width: 120px) {
-    .container {
+    #container {
       width: 100%;
     }
 }
